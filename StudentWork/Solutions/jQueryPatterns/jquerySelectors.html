@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>  
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="viewport" content="width=device-width">
+
+	
+	<title>jQuery Labs</title>
+
+       <link rel="stylesheet" href="../../Solutions/initializr/css/normalize.min.css">
+        <link rel="stylesheet" href="../../Solutions/initializr/css/main.css">
+    	<link rel="stylesheet" href="../../Solutions/initializr/css/social_media.css">
+        <link rel="stylesheet" href="../../Solutions/initializr/css/contact.css" />
+	<!-- jQuery example css -->
+	<link rel="stylesheet" type="text/css" media="screen" href="../../Tools/jquery/screen.css" />
+	
+	<style>
+	    fieldset {color: #000000;
+		           padding-left: 5px;
+				   box-shadow: 0px 0px 0px 0px ;
+				   background-color:lightgrey;
+				   border-radius:0;}
+	</style>
+	
+	<!-- jQuery core library -->
+    <script type="text/javascript" src="../../Tools/jquery/jquery-1.12.1.min.js"></script>
+	
+
+	<!-- Custom JS -->
+	<script src="jQuery/custom.js" type="text/javascript"></script>
+
+	<!-- alternate inline JS -->
+    <script type="text/javascript">
+        // we can add our javascript code here.
+		//But for this lab, we will use the custom.js
+		/*
+			jQuery(document).ready(function() {
+			// do something here
+			});
+		*/
+    </script>
+</head>
+
+<body>
+
+<!-- we will add our HTML content here -->
+<h1>jQuery Labs - Selector Example</h1>
+<header>
+   <button id="step3">Step 3 - Hyperlink Events</button>
+   <button id="step4">Step 4 - Change Background Color</button>
+   <button id="step5">Step 5 - Change Text Color</button>
+   <button id="step6">Step 6 - Change Color on Mouse-Over</button>
+   <button id="step7">Step 7 - Append Text</button>  
+   <button id="step8">Step 8 - Reset Form</button>
+   <button id="step8a">Step 8a - Reset All Forms</button>
+   <button id="step9">Step 9 - Selector with Not()</button>
+   <button id="step10">Step 10 - Selector Expression</button>
+   <button id="step11">Step 11 - Selecting Click Events</button>
+   <button id="step12">Step 12 - Selecting Child Elements</button>
+   <button id="step13">Step 13 - Hover Event</button>
+   <button id="step14">Step 14 - Animate Hyperlinks</button>
+   <button id="step15">Step 15 - Up and Down Effects</button>
+   <button id="step16">Step 16 - Fade In and Out</button>
+</header>
+
+<!-- START -->
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+<article>
+
+Example elements
+
+<p><a id="first" href="#">Alert Link</a>&nbsp;&nbsp;</p>
+
+<a id="redirected" href="/content/gallery">Redirected Link</a>&nbsp;&nbsp;
+
+<a id="anotherLink" href="#">Another Link</a>&nbsp;&nbsp;
+
+<a name="top" href="#bottom">Go to bottom</a>
+	
+<section float="left" width="63%" class="stuff">
+
+
+	<p><b>Ordered List:</b></p>
+	<ol id="orderedlist">
+		<li>First element</li>
+		<li>Second element</li>
+		<li>Third element</li>
+	</ol>
+
+	<p><b>Ordered List 2:</b></p>
+	<ol id="orderedlist2">
+		<li>First element, second list</li>
+		<li>Second element, second list</li>
+		<li>Third element, second list</li>
+		<li>Li with child ul
+			<ul>
+				<li>Child One</li>
+				<li>child two</li>
+			</ul>
+		</li>
+	</ol>
+  </section>	
+  
+</article>
+
+<aside float="right" width="36%">
+	<p><b>Form Section:</b></p>
+	
+	<fieldset>
+    <legend>Form1:</legend>
+		<form id="form">
+			Field 1:<input value="XYZ" /><br />
+			Field 2:<input />
+		</form>
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+    <legend>Form2:</legend>
+	<form>
+		Field 1:<input value="123" /><br />
+		Field 2:<input />
+	</form>
+	</fieldset>
+	
+	<br />
+	
+	<fieldset>
+    <legend>Form3:</legend>
+	<form>
+		CheckBox 1:<input type="checkbox" /> <br />
+		CheckBox 2:<input type="checkbox" checked="checked" />
+	</form>
+	</fieldset>
+</aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+		
+	<h3>Frequently Asked Questions (FAQ) about HTML 5 	<a id="w3cFaq" href="https://www.w3.org/html/wiki/FAQs">(W3C HTML 5 FAQ)</a></h3>
+
+	<dl id="faq">
+		<dt>What is HTML5?</dt>
+		<dd>HTML5 contains powerful capabilities for Web-based applications with more powerful interaction, video support, graphics, more styling effects, and a full set of APIs. 
+		HTML5 adapts to any device, whether desktop, mobile, tablet, or television. HTML5 is an open platform developed under royalty free licensing terms. </dd>
+
+		<dt>Are there new HTML5 tags?</dt>
+		<dd>Yes, there are new HTML5 elements that provide richer semantic descriptions of documents: section, article, header, hgroup, footer, aside and nav; new media elements: audio, video and canvas; new form input types: email, url, number range and search; and a bunch of new element attributes.</dd>
+	</dl>
+
+
+
+
+<p>Slide Up and Down effects</p>
+<div class="accordion2">
+	<h3>Is skydiving safe?</h3>
+	<p>Skydiving is a high-speed aerial sport that exposes its participants to the real risk of injury and death. Each year in the U.S. about 35 people die while making approximately 2 million parachute jumps. Other skydivers are sometimes killed while riding aboard jump aircraft. Analysis of skydiving accidents show that most are caused by jumpers who make mistakes of procedure or judgment. Contrary to popular belief, very few skydiving accidents or injuries are caused by random or unexpected equipment failure.	Those skydivers who are trained well, who stay current and who take a conservative approach to the sport are involved in very few accidents and suffer few -- if any -- injuries. Some people prefer not to expose themselves to significant risks, while others accept the risk in exchange for the enjoyment the activity offers. Most parachute centers require that each customer sign a legally binding assumption-of-risk agreement. The document makes it clear that the sport has its risks and that the jumper is electing to jump in spite of those risks.</p>
+
+	<h3>What are the age requirements?</h3>
+	<p>As far as the government is concerned, there is no minimum age for skydiving in the U.S. But most parachute centers require their customers be at least the "age of legal majority" in their state -- typically 18 years of age.
+
+There is no upper limit. There are many active skydivers who are in the 60s and older.</p>
+</div>
+
+<p>Fade in and out</p>
+
+<p>
+<ul class="menu">
+	<li>
+		<a href="http://www.triveratech.com">Trivera</a>		
+		<em>Your IT Training resource</em>
+	</li>
+	<li>
+		<a href="http://jquery.com">jQuery.com</a>
+		<em>With less, do more.</em>
+	</li>
+	<li>
+		<a href="https://www.w3.org/">W3C</a>
+		<em>Web Standards...</em>
+	</li>
+</ul>
+</p>
+
+
+<p><a name="bottom" href="#top">Go to top</a><p>
+
+<!-- END -->
+</body>
+</html> 

@@ -1,0 +1,43 @@
+ 
+
+.image_carousel {
+
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+    margin-left: 0px;
+
+}
+
+.image_carousel img {
+
+    border: 1px solid #ccc;
+
+    background-color: white;
+
+    padding: 0px;
+
+    margin: 1px;
+   
+
+    display: block;
+
+    float: left;
+
+/*custom*/
+	height: 105px; 
+
+	width: 140px;
+
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+
+}
+
+.clearfix {
+
+    float: none;
+
+    clear: both;
+
+}

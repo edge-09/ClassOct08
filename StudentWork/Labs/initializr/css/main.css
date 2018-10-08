@@ -1,0 +1,602 @@
+/*customized; originally based on http://html5boilerplate.com/ template*/
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+body {
+
+	/*short for font-size:16px/line-height: 26px */
+    font: 1em/1.4em Helvetica, Helvetica Neue, Arial;
+    font-weight:300;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+
+ /* set color theme and border-radius */
+
+.title {
+    color: white;
+}
+
+.header-container {
+    border-bottom: 20px solid #003366;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #003366;
+   	border-radius: 5px;
+   
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #999;
+}
+
+
+nav a {
+ 
+    background: #003366;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+
+/* change link colors */
+header a:link, footer a:link, aside a:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+header a:hover, footer a:hover, aside a:hover {
+	color:white;
+}
+
+header a:visited, footer a:visited, aside a:visited {
+    color: white;
+}
+
+header a:hover, footer a:hover, aside a:hover {
+    text-decoration: underline;
+}
+
+article a:link{
+	color: #76275f;
+}
+
+/*pullquotes*/
+
+/*custom font */
+
+
+.pull {
+	float:right;
+	padding:20px;
+	margin:10px;
+	width:200px;
+	background-color:#49a0d8;
+	
+	/*add the new font-family to this class */
+	
+	
+	font-weight:700;
+	font-size:18px;
+	color:#fff;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	
+	
+	/*gradient generator: http://www.colorzilla.com/gradient-editor/ */
+	
+	background: rgb(184,198,223); /* Old browsers */
+
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I4YzZkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ZDg4YjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+	background: -moz-linear-gradient(top, rgba(184,198,223,1) 0%, rgba(109,136,183,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(184,198,223,1)), color-stop(100%,rgba(109,136,183,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%); /* W3C */
+	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8c6df', endColorstr='#6d88b7',GradientType=0 ); /* IE6-8 */
+
+ 	-webkit-transition: color 1.5s linear;  
+    -moz-transition: color 1.5s linear;    
+    transition: color 1.5s linear;
+	
+}	
+
+
+.pullHighlight {
+	float:right;
+	padding:20px;
+	margin:10px;
+	width:200px;
+	background-color:#A2A9AF;
+	font-family: pullQuote;
+	font-weight:700;
+	font-size:18px;
+	color:#483d8b;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	
+
+	
+	/*gradient generator: 
+	http://www.colorzilla.com/gradient-editor/ 
+	*/
+	
+
+	
+ 	-webkit-transition: color 1.5s linear;  
+    -moz-transition: color 1.5s linear;    
+    transition: color 1.5s linear;
+
+
+}	
+
+
+
+
+.invisible{
+	display:none;
+}
+
+.plain{
+	width: 100%;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+/*buttons to change font size*/
+.sizing{
+	background-color: #ddd;
+}
+
+
+figure{
+float:right;
+}
+
+/* forms */
+
+
+
+.glowButton {
+	padding: 10px 15px;
+	background:#999;
+	font-weight: 700;
+	color:#FFF;
+	font-family:Arial;
+	border: solid 1px #C55B11;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+	box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+	text-shadow: 1px 1px 0 #C55B11;
+}
+
+
+/* ANIMATED SUBMIT */
+
+
+
+
+
+
+
+
+#contact, #poll {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:1em;
+	width: 100%;
+	padding: 7px;
+}
+
+
+
+fieldset {
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: inset 5px 5px 20px 3px #F0F0F0;
+	box-shadow: inset 5px 5px 20px 3px #F0F0F0;
+	margin-bottom:20px;
+	padding: 1px 20px 20px 40px;
+}
+
+label {
+	width:50%;
+	font-weight:300;
+	float:left;
+	text-align:left;
+	clear:both;
+	margin:0;
+	padding:0;
+}
+
+input {
+	border:1px solid #CCC;
+	background-color:#FFF;
+	padding:3px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+legend {
+	padding:14px 20px;
+	background-color:#999;
+	font-weight:700;
+	color:#fff;
+	font-size:14px;
+	border-top-right-radius:5px;
+	border-bottom-left-radius:5px;
+	border-top-left-radius:2px;
+	border-bottom-right-radius:2px;
+}
+
+.button {
+	background-color:#999;
+	border:0;
+	color:#FFF;
+	padding:10px;
+	margin-top:20px;
+	border-top-right-radius:5px;
+	border-bottom-left-radius:5px;
+	border-top-left-radius:2px;
+	border-bottom-right-radius:2px;
+	float: right;
+}
+
+/* 
+css3 appearance property can be set to normal, icon, window, button, menu, field
+normal	Render the element as normal
+icon	Render the element as a small picture
+window	Render the element as a viewport
+button	Render the element as a button
+menu	Render the element as a set of options for the user to choose from
+field	Render the element as an input field
+*/
+
+h1, h2, h3{
+	color: #003366;
+}
+
+aside h3 {
+	color: white;
+}
+
+aside a {
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+aside a:hover {
+	text-decoration: underline;
+}
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;   
+             border-radius: 5px;   
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+     
+     float: right;
+        width: 28%;
+    }
+    
+
+    
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Drag and Drop Shopping Cart</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/social_media.css">
+		<link rel="stylesheet" href="css/dndcart.css">
+		
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+           <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Pet Gallery --  Drag and Drop</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="cart.html">Sale!</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+<!-- note the quantity: can only move that many to shopping cart, quantity decreases -->	
+<ul id="products">
+		<li>
+		<div class="item" id="lionhead" draggable="true">
+			<img src="img/lionhead-rabbit.jpg">
+			<div style="display: none;">
+				<p><strong>Lionhead</strong></p>
+				<p><strong>Price</strong>: <span>$1199.00</span></p>
+				<p><strong>Only</strong> <span>7</span> <strong>Left!</strong></p>
+			</div>
+		</div>
+		</li>
+		<li><div class="item" id="cottontail" draggable="true">
+			<img src="img/cottontail-rabbit.jpg">
+			<div style="display: none;">
+				<p><strong>Cottontail</strong></p>
+				<p><strong>Price</strong>: <span>$199.00</span></p>
+				<p><strong>Only</strong> <span>4</span> <strong>Left!</strong></p>
+			</div>
+		</div>
+		</li>
+		<li><div class="item" id="white" draggable="true">
+			<img src="img/white-rabbit.jpg">
+			<div>
+				<p><strong>White Rabbit</strong></p>
+				<p><strong>Price</strong>: <span>$299.00</span></p>
+				<p><strong>Only</strong> <span>6</span> <strong>Left!</strong></p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="item" id="angora" draggable="true">
+			<img src="img/angora-rabbit.jpg">
+			<div style="display: none;">
+				<p><strong>Angora</strong></p>
+				<p><strong>Price</strong>: <span>$899.00</span></p>
+				<p><strong>Only</strong> <span>2</span> <strong>Left!</strong></p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="item" id="dutch" draggable="true">
+			<img src="img/dwarf-rabbit.jpg">
+			<div>
+				<p><strong>Dutch</strong></p>
+				<p><strong>Price</strong>: <span>$149.00</span></p>
+				<p><strong>Only</strong> <span>5</span> <strong>Left!</strong></p>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class="item" id="lop" draggable="true">
+			<img src="img/english-lop-rabbit.jpg">
+			<div>
+				<p><strong>English Lop</strong></p>
+				<p><strong>Price</strong>: <span>$1199.00</span></p>
+				<p><strong>Only</strong> <span>3</span> <strong>Left!</strong></p>
+			</div>
+		</div>
+		</li>
+	</ul>
+	<div id="cart">
+		<h3>Rabbits</h3>
+		<!-- keep this empty ul for droppables-->
+		<ul></ul>
+		<p id="total">
+		<strong>Total:</strong>
+		<!--keep this $0.00 -->
+		$<span>0.00</span>
+		</p>
+		<br>
+		<!-- this is styled in CSS to display on hover-->
+		<h2>drop here to add to cart</h2>
+	</div>
+</div>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+           	   <div id="social">
+               <a href="#"><img src="img/facebook.png"/></a><a href="#"><img src="img/google.png"/></a><a href="#"><img src="img/twitter.png"/></a>
+               </div>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+		<script src="js/jquery.ndd.js"></script>
+		<script src="js/dragdrop.js"></script>     
+    </body>
+</html>

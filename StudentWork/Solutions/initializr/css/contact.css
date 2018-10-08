@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */ 
+#contact p {
+	width:500px;
+	background-color: #999;
+	padding:20px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+}
+label {
+	color: white;
+	width:150px;
+	font-weight:700;
+	font-size: 14px;
+	float:left;
+	text-align:left;
+	clear:both;
+	margin:0;
+	padding:0;
+}
+input, textarea {
+	border:1px solid #999;
+	background-color:#FFF;
+	padding:3px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	color: #9c9c9c;
+}
+input:focus {
+	-webkit-box-shadow: 0px 0px 5px #999;
+	box-shadow: 0px 0px 5px #999;
+}
+
+
+#user {
+	width:550px;
+	background-color:#e1e1e1;
+	background-position:right;
+	background-repeat:no-repeat;
+	padding:20px;
+	margin:0 0 20px;
+	border:1px solid #EEE;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+legend {
+	padding:15px 25px;
+	background-color:#999;
+	color:#FFF;
+	font-weight:700;
+	font-family:Arial;
+	font-size:16px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	margin-bottom:0 !important;
+	margin-bottom:20px;
+}
+sup {
+	color: #C00;
+}
+
+
+

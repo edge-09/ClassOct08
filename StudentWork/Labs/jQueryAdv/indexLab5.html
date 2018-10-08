@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>The Quote For Today</title>
+<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+<script>
+	var times = 0;
+	$(document).ready(function() {
+		$("button").click(function() {
+			times++;
+			var selEven = $("table tr:nth-child(even)");
+			var selOdd = $("table tr:nth-child(odd)");
+			if (times == 1) {
+				selEven.addClass("togglerowcolors");
+				selOdd.removeClass("togglerowcolors");
+				$('button').html("<b>Highlight Even Rows</b>");
+			} else {
+				times = 0;
+				selOdd.addClass("togglerowcolors");
+				selEven.removeClass("togglerowcolors");
+				$('button').html("<b>Highlight ODD Rows</b>");
+			}
+		});
+		
+	$("<p align='center'>Logged-In?</p>").insertAfter("#castrovalva");
+
+	});
+</script>
+<style type="text/css">
+.togglerowcolors {
+	background-color: rgb(217,225,231);
+	color: red;
+}
+</style>
+</head>
+<body>
+   <section align='center' style='text-align:center'>
+	<table id='castrovalva' border='3' width='50%' height='300' align='center' >
+			<tr>
+				<td>
+					<div id="banner" class="banner">Frequently Asked Questions</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>What is the best pet for you?</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Why do they cost so much?</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>What are some of the best pets?</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Why don't you carry more of a selection of pets?</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Which is the best pet for a young child?</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>How much does it cost to take care of an exotic pet?</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Are there special laws and regulations that I need to comply with to own an exotic pet?</p>
+				</td>
+			</tr>
+		</table>
+
+		<button text-align:center>Dynamic Browser Event Button</button>
+    </section>
+</body>
+</html>
+

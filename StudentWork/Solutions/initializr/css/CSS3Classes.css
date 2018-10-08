@@ -1,0 +1,35 @@
+/* first-of-type Pseudo selector */
+div:first-of-type 
+{
+background:yellow;
+}  
+
+/* last-of-type Pseudo selector */
+div:last-of-type
+{
+background:green;
+} 
+
+/* Only Child Pseudo selector */
+p:only-child
+{
+background:blue;
+}
+
+/* nth-of-type(n) Pseudo selector */
+div:nth-of-type(2)
+{
+background:gray;
+}
+
+
+/* nth-last-of-type(n) Pseudo selector */
+div:nth-last-of-type(2)
+{
+background:cyan;
+}
+
+
+/* Ending Substring Attribute Value Selector */
+
+

@@ -1,0 +1,133 @@
+@charset "utf-8"; 
+/* CSS Document */ 
+#contact p {
+	width:500px;
+	background-color: #999;
+	padding:20px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+}
+label {
+	color: white;
+	width:150px;
+	font-weight:700;
+	font-size: 14px;
+	float:left;
+	text-align:left;
+	clear:both;
+	margin:0;
+	padding:0;
+}
+input, textarea {
+	border:1px solid #999;
+	background-color:#FFF;
+	padding:3px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	color: #9c9c9c;
+}
+input:focus {
+	-webkit-box-shadow: 0px 0px 5px #999;
+	box-shadow: 0px 0px 5px #999;
+}
+
+
+#user {
+	width:550px;
+	background-color:#e1e1e1;
+	background-position:right;
+	background-repeat:no-repeat;
+	padding:20px;
+	margin:0 0 20px;
+	border:1px solid #EEE;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+legend {
+	padding:15px 25px;
+	background-color:#999;
+	color:#FFF;
+	font-weight:700;
+	font-family:Arial;
+	font-size:16px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	margin-bottom:0 !important;
+	margin-bottom:20px;
+}
+sup {
+	color: #C00;
+}
+
+
+
+/* ANIMATED SUBMIT */
+.submit {
+	padding: 10px 15px;
+	background:#999;
+	font-weight: 700;
+	color:#FFF;
+	font-family:Arial;
+	border: solid 1px #C55B11;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+	box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+	text-shadow: 1px 1px 0 #C55B11;
+}
+
+@keyframes glow
+{
+		0%   {
+		-moz-box-shadow: 0px 0px 5px #C55B11;
+    	-webkit-box-shadow: 0 0 5px #C55B11;
+    	box-shadow: 0 0 5px #C55B11;
+		}
+		100% {
+		-moz-box-shadow: 0px 0px 15px #C55B11;
+		-webkit-box-shadow: 0 0 15px #C55B11;
+		box-shadow: 0 0 15px #C55B11;
+		}
+}
+
+@-moz-keyframes glow	
+{	
+		0%   {
+		-moz-box-shadow: 0px 0px 5px #C55B11;
+    	-webkit-box-shadow: 0 0 5px #C55B11;
+    	box-shadow: 0 0 5px #C55B11;
+		}
+		100% {
+		-moz-box-shadow: 0px 0px 15px #C55B11;
+		-webkit-box-shadow: 0 0 15px #C55B11;
+		box-shadow: 0 0 15px #C55B11;
+		}
+}
+@-webkit-keyframes glow
+{
+		0%   {
+		-moz-box-shadow: 0px 0px 5px #C55B11;
+    	-webkit-box-shadow: 0 0 5px #C55B11;
+    	box-shadow: 0 0 5px #C55B11;
+		}
+		100% {
+		-moz-box-shadow: 0px 0px 15px #C55B11;
+		-webkit-box-shadow: 0 0 15px #C55B11;
+		box-shadow: 0 0 15px #C55B11;
+		}
+}
+
+.submit:hover {
+	-moz-animation-name: glow;
+	-moz-animation-timing-function: ease-in;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: alternate;
+	-moz-animation-duration: 400ms;
+	
+	-webkit-animation-name: glow;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-duration: 400ms;
+}

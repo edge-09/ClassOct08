@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>jQuery form </title>
+ 
+<style type="text/css">
+	div{
+		padding:16px;
+	}
+	label{
+		color:red;
+	}
+</style>
+</head>
+
+<body>
+
+<h1>jQuery form selector with events</h1>
+
+<h2>Message = <label id="msg" ></label></h2>
+
+<form name="testing" action="#">
+  <div>
+	TextBox : <input type="text" class="NoCopy" value="This is the message from textbox" />
+  </div>
+  <div>
+	Password : <input type="password" value="This is the message from password" />
+  </div>
+  <div>
+	TextArea : <textarea>This is the message from textarea</textarea>
+  </div>
+  <div>
+	Radio : <input name="gender" type="radio" value="Male" checked>Male</input>
+	        <input name="gender" type="radio" value="Female">Female</input>
+  </div>
+  <div>
+	CheckBox : <input type="checkbox" name="checkme">Check Me</input>
+  </div>
+  <div>
+	File : <input type="file"></input>
+  </div>
+  <div>
+	Hidden : <input type="hidden" value="This is the message from hidden"/>
+  </div>
+  <div>
+	Country : <select id="country">
+				<option value="United States">United States</option>
+				<option value="China">China</option>
+		     </select>
+  </div>
+  <div>
+	<input type="submit"></input> <input type="reset"></input>
+  </div>	
+</form>
+
+<button id="text">input:text</button>
+<button id="password">input:password</button>
+<button id="textarea">textarea</button>
+<button id="radio">input:radio</button>
+<button id="checkbox">input:checkbox</button>
+<button id="file">input:file</button>
+<button id="hidden">input:hidden</button>
+<button id="select">select</button>
+<button id="submit">input:submit</button>
+<button id="reset">input:reset</button>
+
+<script src="./js/vendor/jquery-1.12.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#text, #password, #hidden, #textarea, #file, #submit, #reset").click(function () {
+	  var str = $(this).text();
+	  $('input, textarea, select').css("background", "#ffffff");
+	  $(str).css("background", "#ff0000");
+	  $('#msg').html($(str).val());
+	  $(str).toggle(2000, function(){
+            alert("The text was " + $(str).val());
+        });
+    });
+	
+    $("#radio").click(function () {
+	  $('input, textarea, select').css("background", "#ffffff");
+	  $('#msg').html($('input:radio[name=gender]:checked').val());
+    });
+	
+    $("#checkbox").click(function () {
+	  var str = $(this).text();
+	  $('input, textarea, select').css("background", "#ffffff");
+	  
+	  if($('input:checkbox[name=checkme]').is(':checked')){
+	  	$('#msg').html("Checkbox is checked");
+	  }else{
+	  	$('#msg').html("Checkbox is unchecked");
+	  }	  
+    });
+	
+    $("#select").click(function () {
+	  $('input, textarea, select').css("background", "#ffffff");
+	  $('#msg').html($('#country').val());
+    });
+	
+	$('.NoCopy').on('cut copy paste', function(e){
+        e.preventDefault();
+       	alert('Cut/Copy/Paste is disabled for this textbox.');
+    });
+
+});
+</script>
+
+</body>
+</html>

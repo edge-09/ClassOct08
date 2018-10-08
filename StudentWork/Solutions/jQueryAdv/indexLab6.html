@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>The Quote For Today</title>
+<script type='text/javascript' src='jquery-1.12.1.min.js'></script>
+<script type="text/javascript">
+   function toggle() {$('tr').toggleClass('danger');}
+   function execute() {
+   var command = $('input[name=doit]:checked').val();
+   //alert(command);
+   $('#one')[command]('#targets p')
+$('#two')[command]('#targets p:first')
+
+}
+
+</script>
+<script>
+	$(document).ready(function() {
+		$("tr").on("mouseover mouseout", function(){
+			$(this).toggleClass("danger");
+		});
+		
+		$('.NoCopy').on('cut copy paste', function(e){
+			e.preventDefault();
+			alert('Cut/Copy/Paste is disabled for this textbox.');
+		});
+	});
+</script>
+<style>
+   body {font-size: 12pt;}
+   table {background-color: aqua; border: 1px black solid;}
+   td {padding: 12px 8px;}
+   .danger {background-color: red; font-size: 18pt;}
+</style>
+
+</head>
+
+<body>
+   <section align='center'>
+
+		<fieldset id="source">
+	<legend>Source Elements</legend>
+	<img id="one" src="one.png" /> <img id="two" src="two.png" />
+</fieldset>
+<fieldset id="targets">
+	<legend>Target Elements</legend>
+	<p><img src="three.png" /></p>
+	<p><img src="three.png" /></p>
+	<p><img src="three.png" /></p>
+</fieldset>
+<div>
+<form action="" onsubmit="return false;">
+<div>
+<input type="text" class="NoCopy" />
+<input type="radio" name="doit" value="appendTo" checked="checked"/>
+Add After Turkey
+<input type="radio" name="doit" value="prependTo" />
+Add Before Turkey
+</div>
+   <button type="button" onclick="execute()">Execute</button>
+</form>
+</div>
+
+
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <title>JavaScript debugging example</title>
+    
+    <script type="text/javascript">
+
+        //create a global variable for our <div>
+        var display;
+
+        function init() {
+            //initialize only after the HTML has been loaded
+            display = document.getElementById("results");
+        }
+
+
+        function firstParam() {
+            //set breakpoint here 
+            var a = 5;
+            secondParam(a);
+        }
+
+
+        function secondParam(a) {
+            var b = 10;
+            thirdParam(a, b);
+        }
+
+        function thirdParam(a, b) {
+            var c = 15;
+            var d = a + b + c;
+
+            //display to console if F12 tools is open
+            if (window.console && window.console.log) {
+                window.console.log(a + " + " + b + " + " + c + " = " + d);
+            } else {
+                display.innerText = a + " + " + b + " + " + c + " = " + d;
+            }
+        }
+    </script>
+</head>
+<body onload="init();">
+        <p><button onclick="firstParam();">Run</button></p>
+        <div id="results"></div>
+</body>
+</html> 
+

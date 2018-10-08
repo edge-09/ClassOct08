@@ -1,0 +1,107 @@
+#todo {
+  position: relative;
+  min-width: 330px;
+}
+#todo .add-todo {
+  min-width: 330px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.3);
+}
+#todo .add-todo input[type="text"] {
+  width: 90%;
+  padding: 0 0 10px 0;
+  font-size: 21px;
+  border: 0;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+#todo .add-todo input[type="submit"] {
+  font-size: 19px;
+  width: 10%;
+  border: 1px solid black;
+  background: white;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+  cursor: pointer;
+  outline: none;
+}
+#todo .add-todo input[type="submit"]:focus, #todo .add-todo input[type="submit"]:hover {
+  background: #ddd;
+}
+input {
+	border-radius: 5px;
+}
+ul.todo-list {
+  margin: 0;
+  padding: 0 0 0 0;
+}
+ul.todo-list li {
+  -webkit-transition: box-shadow .20s ease;
+  transition: box-shadow .20s ease;
+  list-style: none;
+  box-shadow: 0 2px 15px -8px black;
+  margin-bottom: 30px;
+  word-break: break-word;
+  margin: 30px 30px 0;
+}
+ul.todo-list li:hover {
+  box-shadow: 0 2px 15px -5px black;
+}
+ul.todo-list li input[type="checkbox"] {
+  display: none;
+}
+ul.todo-list li label {
+  position: relative;
+  display: block;
+  padding: 25px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+ul.todo-list li label span {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  font-size: 9px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+}
+ul.todo-list li label span:hover {
+  background: red;
+}
+ul.todo-list li input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  background: #ddd;
+  color: #ffffff;
+}
+
+.remove-List {
+  margin: 30px 30px 130px 30px;
+  cursor: pointer;
+}
+.remove-List.hidden {
+  display: none;
+}

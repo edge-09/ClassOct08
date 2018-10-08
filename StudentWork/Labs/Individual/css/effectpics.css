@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */ 
+
+.pic{
+	margin:5px;
+	border:2px solid #FFF;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+.effects  h2 {
+	font-weight:700;
+	color: #f16529;
+}
+
+#pet {
+	list-style-type: none;
+	overflow: auto;
+}
+#pet li {
+	float: left;
+	padding: 10px;
+}
+#pet li a.bounce {
+	display: block;
+	position: relative
+}

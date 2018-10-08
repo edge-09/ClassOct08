@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */  
+
+
+#social img{
+height: 75px;
+width: 75px;
+border: none;
+max-width: 100%;
+}
+
+
+#social{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+#social a{
+  width: 100%;
+  max-width: 300px; 
+  margin-left: 5px;
+  margin-right: auto;
+  text-align: left;
+}
+
+
+#social a:hover img {
+	opacity:0.5;
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+}

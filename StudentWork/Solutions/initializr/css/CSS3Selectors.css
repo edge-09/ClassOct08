@@ -1,0 +1,18 @@
+/* Beginning Substring Attribute Value Selector */
+div[class^="test"] 
+{ 
+background:yellow;
+}
+
+/* Ending Substring Attribute Value Selector */
+div[class$="test"]
+{
+background:green;
+}
+
+/* Arbitrary Substring Attribute Value Selector */
+div[class*="test"]
+{
+font-weight: bolder;
+font-style: italic;
+} 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+    var x = prompt("How old are you?", 21);
+	document.write("Number is: ", x);    
+	try { 
+        if(x == "")  {
+			throw "empty";
+		}
+        if(isNaN(x)) {
+			throw "not a number";
+		}
+        x = Number(x);
+        if(x > 100)   {
+			throw "too high";
+		}
+        if(x < 1) {
+			throw "too low";
+		}	
+    }
+    catch(err) {
+        alert("Input is " + err);
+    }
+    finally {
+        alert("Thanks!");
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
