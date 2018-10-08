@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        "use strict";
+
+        for(var i = 0; i < 10 ; i +=2 ){
+            console.log(i);
+        }
+
+
+        var notHappy = true;
+        var total = 0;
+        do{
+            var number = prompt("Gimme a number", "1");
+            total += parseInt(number, 10);   //parse int, convert to a whole number
+            console.log("total", total);
+
+            notHappy = total < 100;
+        } while(notHappy);
+
+
+
+    
+    </script>
+</body>
+</html>

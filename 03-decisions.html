@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>    
+        "use strict";
+    
+
+        var MIN_FOR_DISCOUNT = 500; //Shout caps with underscores is a constant. DO NOT CHANGE ME! Constant
+        var discount = .25;
+        var purchase = prompt("How much money did you spend?");  
+        purchase = parseFloat(purchase); //Will keep the deciamls
+
+        var finalPrice =0;
+        if(purchase >= MIN_FOR_DISCOUNT){
+            finalPrice = purchase * (1 - discount);
+        }
+        else{
+            finalPrice = purchase;
+        }
+
+        document.write("Final Price" + finalPrice);
+
+
+    
+    </script>
+</body>
+</html>
