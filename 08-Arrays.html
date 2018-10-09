@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <label for="name-text">Price</label>
+        <input id="name-text"  />
+        <button id="add-button">Add Name</button>
+    
+        <ul id="names-list">
+            <li>no names yet</li>
+        </ul>
+
+
+
+    <script>
+        
+        var names = [];
+        // names[0] = "Christian";
+        // names[1] = "Cindy";
+        // names[2] = "Eddie";
+
+        // console.log("name count: " , names.length);
+        // console.log("Second Name: ", names[1]);
+
+        function addName(){
+            var nameText = document.getElementById("name-text");
+            var newName = nameText.value; //value is what the user typed in
+            
+            // the hard way
+            // var nextOpenIndex = names.length;
+            // names[nextOpenIndex] = newName;
+            //names[names.length] = newName;
+
+            names.push(newName);
+            //var lastName = names.pop();
+        }
+
+        function updateScreen(){
+            
+            var list = document.getElementById("names-list");
+            list.innerHTML = "";
+            for(var i = 0; i < names.length; i +=1 ){
+                var currentName = names[i];
+                var liElement = document.createElement("li");
+                liElement.textContent = currentName;
+                list.appendChild(liElement);
+            }
+        }
+
+        function addButton_clicked(){
+            addName();
+            updateScreen();
+        }
+
+
+        var btn = document.getElementById("add-button");
+        btn.addEventListener("click", addButton_clicked);
+
+
+    </script>
+</body>
+
+</html>
