@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        var request = new XMLHttpRequest()
+
+        //Object maker functions are called ...
+        // Constructors
+        function Cart(name) {
+            //private properties
+            var items = [];
+            
+
+            //this //- Because new was called
+            //public properties
+            //this. is going to be public
+            this.name = name;
+            this.add = function (productName, price) {
+                var item = {
+                    name: productName,
+                    price: price
+                };
+                items.push(item);
+                this.total += price;
+             };
+            this.total = 0;
+            //return this //- because new was called
+        }
+
+        var jessicasCart = new Cart("jessica");
+        jessicasCart.add("Ballet Bar", 75);
+        jessicasCart.add("Gecko", 75);
+
+        alert("Total is " + jessicasCart.total);
+        
+
+        var groceryCart = new Cart("groceries");
+
+        //Create an object
+        var cart1 = {};
+        cart1.items = [];
+        cart1.add = function (productName, price) { };
+        cart1.total = 0;
+
+        var cart2 = {
+            items: [],
+            add: function (productName, price) { },
+            total: 0
+        };
+
+
+    </script>
+</body>
+
+</html>
