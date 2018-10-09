@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>First</button>
+
+    <div id="button-container" class="special">
+        <button>Second</button>
+        <button class="current" >Third</button>
+        <button>Fourth</button>
+    </div>
+
+    <script>
+
+        "use strict";
+
+        var buttons = document.getElementsByTagName("button"); //list
+        var divs = document.getElementsByTagName("div"); //list
+        var x = document.getElementById("button-contaner"); //element
+
+
+
+        //CSS selectors
+        // h1 - h1 tags
+        // .current - all elements with the class="current"
+        // #button-container = the single element with the ID of button-container
+        // #button-container button.current
+        var b1 = document.querySelector("div button"); //element
+        var buttons = document.querySelectorAll("div button"); //list
+        var container = document.getElementById("button-container"); //element
+
+        container.onclick = obj_clicked;
+
+        container.addEventListener("click", function (evt) {
+            alert("Hi class!!");
+        });
+
+        
+        function obj_clicked(evt) {
+            var button = evt.target;
+            
+            alert("The button clicked says: " + button.textContent);
+            
+        }
+        
+        container.addEventListener("click", obj_clicked); //Multiple event handler
+
+    </script>
+
+</body>
+
+</html>

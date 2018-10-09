@@ -1,114 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Website</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/filter.css" rel="stylesheet">
-	<link href="css/nav.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Website</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/filter.css" rel="stylesheet">
+  <link href="css/nav.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->	
-	
-  </head>
-  <body>
-  
-<nav class="mynav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-	<li><a href="contact.html">Contact</a></li>
-    <li><a href="frameworks.html">Frameworks</a></li>
-	<li><a href="checklist.html">Checklist</a></li>
-    <li><a href="locations.html">Locations</a></li>
-	<li><a href="shoppingcart.html">Shopping Cart</a></li>
-	<li><a href="quiz.html">Quiz</a></li>
-  </ul>
-</nav>
-<h1>Popular Javascript Tools</h1>
-<p>
-<input type="text" id="search" placeholder="Search for Javascript libraries and frameworks">
+    <![endif]-->
 
-<table id="infoTable">
-  <tr class="header">
-    <th id="jsname">Name</th>
-	<th id="release">Stable Release</th>
-    <th id="desc">Description</th>
-  </tr>
-  <tr>
-    <td>Angular</td>
-	<td>2010</td>
-    <td>A popular framework that is part of the MEAN stack (MongoDB, Express.js, Angular and Node.js) </td>
-  </tr>
-  <tr>
-    <td>Ember</td>
-	<td>2011</td>
-    <td>Opinionated framework based on the MVVM (Model-View-ViewModel) design pattern</td>
-  </tr>
-   <tr>
-    <td>Grunt</td>
-	<td>2012</td>
-	<td>One of the first JavaScript task runners, but has a complicated JSON configuration</td>
-  </tr>
-   <tr>
-    <td>Gulp</td>
-	<td>2016</td>
-	<td>Popular task runner with easy-to-read JavaScript, fast and fun</td>
-  </tr>
-  <tr>
-    <td>Jasmine</td>
-	<td>2017</td>
-    <td>Behavior-driven test suite for unit testing</td>
-  </tr>
-  <tr>
-    <td>jQuery</td>
-	<td>2006</td>
-    <td>DOM library with small distribution size</td>
-  </tr>
-  <tr>
-    <td>Knockout</td>
-	<td>2010</td>
-    <td>Small and lightweight, with no dependencies, supports browsers back to IE6</td>
-  </tr>
-  <tr>
-    <td>Node</td>
-	<td>2017</td>
-    <td>An open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side </td>
-  </tr>
- <tr>
-    <td>NPM</td>
-	<td>2010</td>
-    <td>The Node package manager, can be used for general task running</td>
-  </tr> 
- <tr>
-    <td>React</td>
-	<td>2013</td>
-    <td>Focuses on building UI as the "view" part of MVC</td>
-  </tr>
- <tr>
-    <td>Underscore</td>
-	<td>2015</td>
-    <td>Provides hundreds of JavaScript utility functions</td>
-  </tr>
-   <tr>
-    <td>Webpack</td>
-	<td>2017</td>
-    <td>Module bundler, task runner, frequently used with React</td>
-  </tr>
-  </table>
+</head>
 
-</p>
+<body>
 
-<script src="js/nav.js"></script>
-<script src="js/capitalize.js"></script>
-<script src="js/filter.js"></script>
+  <nav class="mynav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="frameworks.html">Frameworks</a></li>
+      <li><a href="checklist.html">Checklist</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="shoppingcart.html">Shopping Cart</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+  <h1>Popular Javascript Tools</h1>
+  <p>
+    <input type="text" id="search" placeholder="Search for Javascript libraries and frameworks">
 
-  </body>
+    <table id="infoTable">
+      <tr class="header">
+        <th id="jsname">Name</th>
+        <th id="release">Stable Release</th>
+        <th id="desc">Description</th>
+      </tr>
+      <tr>
+        <td>Angular</td>
+        <td>2010</td>
+        <td>A popular framework that is part of the MEAN stack (MongoDB, Express.js, Angular and Node.js) </td>
+      </tr>
+      <tr>
+        <td>Ember</td>
+        <td>2011</td>
+        <td>Opinionated framework based on the MVVM (Model-View-ViewModel) design pattern</td>
+      </tr>
+      <tr>
+        <td>Grunt</td>
+        <td>2012</td>
+        <td>One of the first JavaScript task runners, but has a complicated JSON configuration</td>
+      </tr>
+      <tr>
+        <td>Gulp</td>
+        <td>2016</td>
+        <td>Popular task runner with easy-to-read JavaScript, fast and fun</td>
+      </tr>
+      <tr>
+        <td>Jasmine</td>
+        <td>2017</td>
+        <td>Behavior-driven test suite for unit testing</td>
+      </tr>
+      <tr>
+        <td>jQuery</td>
+        <td>2006</td>
+        <td>DOM library with small distribution size</td>
+      </tr>
+      <tr>
+        <td>Knockout</td>
+        <td>2010</td>
+        <td>Small and lightweight, with no dependencies, supports browsers back to IE6</td>
+      </tr>
+      <tr>
+        <td>Node</td>
+        <td>2017</td>
+        <td>An open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side
+        </td>
+      </tr>
+      <tr>
+        <td>NPM</td>
+        <td>2010</td>
+        <td>The Node package manager, can be used for general task running</td>
+      </tr>
+      <tr>
+        <td>React</td>
+        <td>2013</td>
+        <td>Focuses on building UI as the "view" part of MVC</td>
+      </tr>
+      <tr>
+        <td>Underscore</td>
+        <td>2015</td>
+        <td>Provides hundreds of JavaScript utility functions</td>
+      </tr>
+      <tr>
+        <td>Webpack</td>
+        <td>2017</td>
+        <td>Module bundler, task runner, frequently used with React</td>
+      </tr>
+    </table>
+
+  </p>
+
+  <script src="js/nav.js"></script>
+  <script src="js/capitalize.js"></script>
+  <script src="js/filter.js"></script>
+
+</body>
+
 </html>
