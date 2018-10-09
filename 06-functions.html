@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        "use strict";
+
+
+
+        var MIN_FOR_DISCOUNT = 500; //Shout caps with underscores is a constant. DO NOT CHANGE ME! Constant
+        var discount = .25;
+        var purchase = prompt("How much money did you spend?");
+        purchase = parseFloat(purchase); //Will keep the deciamls
+
+
+
+        var subtotal = 0;
+        if (purchase >= MIN_FOR_DISCOUNT) {
+            subtotal = purchase * (1 - discount);
+        }
+        else {
+            subtotal = purchase;
+        }
+
+        var state = prompt("What is your state abv?");
+        var taxtRate = getTaxRate(state);
+
+        var finalPrice = subtotal * (1 + taxRate);
+        console.log("final price", finalPrice)
+
+        // cmd
+        function goCleanYourRoom() {
+            console.log("Cleaning Floor");
+            console.log("Cleaning Under Bed");
+            console.log("Cleaning Closet");
+            console.log("Brining up laundry");
+        }
+
+
+
+        goCleanYourRoom();
+
+        //query will have a return
+        function whatTimeIsIt() {
+            var currentTime = new Date(); //Big discussion on new is in the future ...
+            return currentTime;
+        }
+
+        var d = whatTimeIsIt()
+
+
+        //Function Statement
+        //Function statment starts a new line with function followed by a function definition
+        function add(n1, n2) {
+            var total = n1 + n2;
+            return total;
+        }
+
+        function subtract(n1, n2) {
+            var total = n1 - n2;
+            return total;
+        }
+
+        function multiply(n1, n2) {
+            return n1 * n2;
+        }
+
+        function divide(n1, n2) {
+            return n1 / n2;
+        }
+
+        function calculate(func, n1, n2) {
+            var answer = func(n1, n2);
+            return answer;
+        }
+
+
+        var x1 = calculate(add, 40, 2);
+        var x2 = calculate(multiply, 21, 2);
+        var x3 = calculate(divide, 82, 2);
+        var x4 = calculate(subtract, 50, 8);
+
+        function getTaxRate(stateAbv) {
+
+            switch (stateAbv.toUpperCase()) {
+                case "FL":
+                case "MI":
+                    return .06;
+                case "OH":
+                    return .07;
+                case "NY":
+                case "TX":
+                    return .08;
+                case "TN":
+                    return .0925;
+                default:
+                    return 0;
+            }
+        }
+
+
+        //Function expression
+        // var add = function(n1,n2){
+        //     var total = n1 + n2;
+        //     return total;
+        // };
+
+
+
+        // a function built to deal with unknow number of parameters
+        //arguments is a builtin array of parameters
+        function addNumbers(n) {
+            var total = n || 0;
+            for(var i = 1; i < arguments.length; i +=1){
+                total += arguments[i];
+            }
+            return total;
+        }
+
+        var answer = addNumbers(7,7,7,7,14);
+
+
+    </script>
+</body>
+
+</html>

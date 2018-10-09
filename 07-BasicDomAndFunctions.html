@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="price-text">Price</label>
+    <input id="price-text" value="0" />
+    <button id="calculate-button">Calculate</button>
+
+    <div id="result">...</div>
+
+
+    <script>
+
+        function calculate(purchasePrice) {
+            //imagine this is more complicated
+            var SALES_TAX_RATE = .06;
+            return purchasePrice * (1 + SALES_TAX_RATE);
+        }
+
+        function process_form() {
+            var priceText = document.getElementById("price-text");
+            var price = priceText.value;
+            var total = calculate(price);
+            var displayElement = document.getElementById("result");
+            displayElement.innerText = "Final Price is " + total;
+            setTimeout(clearDisplay, 5000); // 5000 milliseconds, or 5 seconds
+            
+        }
+
+        function clearDisplay(){
+            var displayElement = document.getElementById("result");
+            displayElement.innerText = "...";
+        }
+
+
+        var btn = document.getElementById("calculate-button");
+        btn.addEventListener("click", process_form); //Wriring up an event, subscribing to an event, hooking up and event
+
+
+    </script>
+
+</body>
+
+</html>

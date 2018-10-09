@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<script>
- var character = prompt("What is your favorite letter?","e");
- switch(character.toLowerCase()){
-	case "a":
-	case "e":
-	case "i":
-	case "o":
-	case "u":
-	document.write(character, " is a vowel.<br>");
-	break;
-	default:
-	document.write(character, " is a consonant.<br>");
- }
+	<script>
+		var character = prompt("What is your favorite letter?", "e");
+		switch (character.toLowerCase()) {
+			case "a":
+			case "e":
+			case "i":
+			case "o":
+			case "u":
+				document.write(character, " is a vowel.<br>");
+				break;
+			default:
+				document.write(character, " is a consonant.<br>");
+		}
 
- var num = prompt("How many letters do you like?", 1);
- document.write("You like ",num, num != 1 ? " letters." : " letter.");
-</script>
+		var num = prompt("How many letters do you like?", 1);
+		document.write("You like ", num, num != 1 ? " letters." : " letter.");
+	</script>
 
 </body>
+
 </html>
-
-
-
