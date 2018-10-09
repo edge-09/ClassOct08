@@ -10,18 +10,19 @@
 
 <body>
 
-        <label for="name-text">Price</label>
-        <input id="name-text"  />
-        <button id="add-button">Add Name</button>
-    
-        <ul id="names-list">
-            <li>no names yet</li>
-        </ul>
+    <label for="name-text">Price</label>
+    <input id="name-text" />
+    <button id="add-button">Add Name</button>
+    <button id="demo-button">Demo</button>
+
+    <ul id="names-list">
+        <li>no names yet</li>
+    </ul>
 
 
 
     <script>
-        
+
         var names = [];
         // names[0] = "Christian";
         // names[1] = "Cindy";
@@ -30,10 +31,10 @@
         // console.log("name count: " , names.length);
         // console.log("Second Name: ", names[1]);
 
-        function addName(){
+        function addName() {
             var nameText = document.getElementById("name-text");
             var newName = nameText.value; //value is what the user typed in
-            
+
             // the hard way
             // var nextOpenIndex = names.length;
             // names[nextOpenIndex] = newName;
@@ -43,11 +44,11 @@
             //var lastName = names.pop();
         }
 
-        function updateScreen(){
-            
+        function updateScreen() {
+
             var list = document.getElementById("names-list");
             list.innerHTML = "";
-            for(var i = 0; i < names.length; i +=1 ){
+            for (var i = 0; i < names.length; i += 1) {
                 var currentName = names[i];
                 var liElement = document.createElement("li");
                 liElement.textContent = currentName;
@@ -55,14 +56,38 @@
             }
         }
 
-        function addButton_clicked(){
+        function addButton_clicked() {
             addName();
             updateScreen();
         }
 
+        //Transform Function
+        // tim -> 3
+        // Cindy -> 5
+        function countLetters(word) {
+            return word.length;
+        }
 
-        var btn = document.getElementById("add-button");
-        btn.addEventListener("click", addButton_clicked);
+        function demoFunction() {
+            // var characterCount = [];
+            // for (var i = 0; i < names.length; i++) {
+            //     var currentName = names[i];
+            //     var count = countLetters(currentName)
+            //     characterCount.push(count);
+            // }
+
+            var characterCount = names.map(countLetters);
+            console.log(characterCount);
+        }
+        var btn1 = document.getElementById("add-button");
+        btn1.addEventListener("click", addButton_clicked);
+
+        var btn2 = document.getElementById("demo-button");
+        btn2.addEventListener("click", demoFunction);
+
+        var a = "rob";
+        var a = 77;
+        var a = [];
 
 
     </script>
