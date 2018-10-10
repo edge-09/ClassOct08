@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+    .light{
+        background-color: lightgray;
+    }
+
+    [data-describes]{
+        cursor: pointer;
+    }
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+</header>
+
+
+<h3 data-describes="#course-description">Description of course</h3>
+<p id="course-description" style="display:none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel in minus amet veritatis dolorem, reprehenderit quaerat placeat perspiciatis quia eos delectus repudiandae fuga culpa illo unde repellendus praesentium aliquid non. Velit natus similique vel amet rerum quaerat! Maiores iste sequi, at vero laudantium nihil perspiciatis dolor? Fugit unde dolorum modi odio iste quas consequatur consectetur pariatur, ratione explicabo reprehenderit facere praesentium in accusantium ea sed nostrum et hic temporibus optio asperiores. Placeat delectus quaerat nobis tempore fugit maiores voluptatibus aliquam dolore alias omnis odio rerum totam in ut fuga autem rem, aperiam voluptatem tempora dolorem doloribus corrupti. Tempore, voluptatem, commodi ducimus id assumenda eius aliquid placeat aperiam atque repellat aspernatur modi laudantium quaerat similique consectetur obcaecati ab, velit quibusdam. Vero sunt eum explicabo similique omnis modi temporibus voluptate soluta corrupti architecto ipsa error fugit, aperiam ducimus et numquam aspernatur unde reiciendis eveniet obcaecati possimus sint beatae magni? Autem distinctio esse consectetur obcaecati repudiandae veritatis aperiam ipsum iure, id eum et incidunt reiciendis ea saepe, sed quam illo in quos quasi fuga quo nam doloremque, necessitatibus corporis? Magni harum ipsa ipsam laudantium quod quos consequuntur quis placeat id obcaecati alias quaerat, neque odit facilis, aut voluptatum. Recusandae commodi inventore quis? Quibusdam?
+</p>
+
+<h3 data-describes="#course-description2">Description of course</h3>
+<p id="course-description2" style="display:none">
+    Vel in minus amet veritatis dolorem, reprehenderit quaerat placeat perspiciatis quia eos delectus repudiandae fuga culpa illo unde repellendus praesentium aliquid non. Velit natus similique vel amet rerum quaerat! Maiores iste sequi, at vero laudantium nihil perspiciatis dolor? Fugit unde dolorum modi odio iste quas consequatur consectetur pariatur, ratione explicabo reprehenderit facere praesentium in accusantium ea sed nostrum et hic temporibus optio asperiores. Placeat delectus quaerat nobis tempore fugit maiores voluptatibus aliquam dolore alias omnis odio rerum totam in ut fuga autem rem, aperiam voluptatem tempora dolorem doloribus corrupti. Tempore, voluptatem, commodi ducimus id assumenda eius aliquid placeat aperiam atque repellat aspernatur modi laudantium quaerat similique consectetur obcaecati ab, velit quibusdam. Vero sunt eum explicabo similique omnis modi temporibus voluptate soluta corrupti architecto ipsa error fugit, aperiam ducimus et numquam aspernatur unde reiciendis eveniet obcaecati possimus sint beatae magni? Autem distinctio esse consectetur obcaecati repudiandae veritatis aperiam ipsum iure, id eum et incidunt reiciendis ea saepe, sed quam illo in quos quasi fuga quo nam doloremque, necessitatibus corporis? Magni harum ipsa ipsam laudantium quod quos consequuntur quis placeat id obcaecati alias quaerat, neque odit facilis, aut voluptatum. Recusandae commodi inventore quis? Quibusdam?
+</p>
+
+
+
+
+
+    <a id="apiLink" href="http://api.jquery.com" data-last-clicked="">Api Docs</a>
+    <table id="zebra">
+        <tr>
+            <td>Foo</td>
+            <td>Foo</td>
+            <td id="stafford" data-position="qb" data-number="9">Matt Stafford</td>
+        </tr>
+        <tr>
+            <td>bar</td>
+            <td>bar</td>
+            <td>bar</td>
+        </tr>
+        <tr>
+            <td>Baz</td>
+            <td>Baz</td>
+            <td>Baz</td>
+        </tr>
+        <tr>
+            <td>Quux</td>
+            <td>Quux</td>
+            <td>Quux</td>
+        </tr>
+        <tr>
+            <td>Foo</td>
+            <td>Foo</td>
+            <td>Foo</td>
+        </tr>
+        <tr>
+            <td>bar</td>
+            <td>bar</td>
+            <td>bar</td>
+        </tr>
+        <tr>
+            <td>Baz</td>
+            <td>Baz</td>
+            <td>Baz</td>
+        </tr>
+        <tr>
+            <td>Quux</td>
+            <td>Quux</td>
+            <td>Quux</td>
+        </tr>
+    </table>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        $(function () {
+
+            "use strict";
+
+            //Read the href attribute
+            var url = $("#apiLink").attr("href")
+
+            //Changing the href attribute
+            $("#apiLink").attr("href", "https://api.jquery.com")
+
+           // $("#zebra tr:odd").css("background-color", "lightgray")
+            $("#zebra tr:odd").addClass("light")
+
+
+            //Get stafford infor
+            var cell = $("#stafford")
+            var content = cell.text();
+            var position = cell.attr("data-position")
+            var number = cell.data("number")
+
+
+
+
+            //Wire up any header/descriptions
+            $("h3[data-describes]").click(function(){
+
+                var elementToToggle = $(this).data("describes")
+                $(elementToToggle).slideToggle();
+
+            });
+
+
+
+        });
+
+
+        $("<h1>")
+            .text("Generated from JavaScript")
+            .addClass("mainHeader")
+            .appendTo("header"); //appendTo give a selector
+
+        $("header").append("<h2>Actually, jQuery</h2>")
+
+
+
+    </script>
+</body>
+
+</html>

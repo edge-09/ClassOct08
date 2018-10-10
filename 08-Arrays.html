@@ -52,6 +52,7 @@
                 var currentName = names[i];
                 var liElement = document.createElement("li");
                 liElement.textContent = currentName;
+                liElement.setAttribute("data-position", i);
                 list.appendChild(liElement);
             }
         }

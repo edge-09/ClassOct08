@@ -21,7 +21,6 @@
         function Cart(name) {
             //private properties
             var items = [];
-            
 
             //this //- Because new was called
             //public properties
@@ -34,17 +33,18 @@
                 };
                 items.push(item);
                 this.total += price;
-             };
+            };
             this.total = 0;
             //return this //- because new was called
         }
+        Cart.prototype.toString = function() { return this.name; };
 
         var jessicasCart = new Cart("jessica");
         jessicasCart.add("Ballet Bar", 75);
         jessicasCart.add("Gecko", 75);
 
         alert("Total is " + jessicasCart.total);
-        
+
 
         var groceryCart = new Cart("groceries");
 
@@ -59,6 +59,22 @@
             add: function (productName, price) { },
             total: 0
         };
+
+        // loop thru the properties of an object
+        var book = {
+            title: "JavaScript: The Good Parts",
+            author: "Douglas Crockford",
+            pages: 250,
+            toString: function() { return this.title; }
+        };
+
+        // for (var prop in book) {
+        //     var value = book[prop];
+        //     alert(prop + " is " + value);
+        // }
+
+        alert(book.toString());
+
 
 
     </script>

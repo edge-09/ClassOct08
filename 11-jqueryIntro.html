@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .special {
+            font-size: 30pt;
+            color: olive;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            padding: 3em;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+        
+        $(function(){
+            
+            "use strict";
+            
+            var name = "rob";
+
+
+            $("button").click(function () {
+                $("#display")
+                    .text("Hello jQuery")
+                    .addClass("special");
+
+                $("button").hide("slow");
+            });
+
+
+        });
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <button>Hi jQuery</button>
+    <div id="display">
+        ...
+    </div>
+
+    <h2>Create a Document in HTML in VS Code</h2>
+    <ul>
+        <li>ctrl + n</li>
+        <li>ctrl + s</li>
+        <li>save with .html extension</li>
+        <li>html:5 tab tab</li>
+    </ul>
+
+
+</body>
+
+</html>
