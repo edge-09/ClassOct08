@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        var x = 10;
+
+        if (x) {
+            const y = 100;
+            //y = 200; //Will cause an error
+        }
+
+
+        var names = ["Christian", "Cindy", "Eddie", "Gopal", "Mike", "Sharon", "YingHong", "Joe", "Tim"];
+
+        var longerNames = names.filter(name => name.length > 3);
+        longerNames.forEach(printName);
+
+
+        function isLongName(name) {
+            return name.length > 3; //T/F
+        }
+
+        function printName(name) {
+            console.log(name);
+        }
+
+
+        var thing = 'break';
+
+        var message = `Everyone take a ${thing} in 2 minutes`;
+        var message = 'Everyone take a ' + thing + ' in 2 minutes';
+
+
+        var n = 10000000.1234;
+        var formatter = new Intl.NumberFormat("de-DE");
+        var formatted = formatter.format(n);
+        console.log(formatted);
+
+    </script>
+</body>
+
+</html>
