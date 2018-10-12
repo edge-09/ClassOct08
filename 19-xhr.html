@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<form>
+    <label for="username-text">User Name</label>
+    <input id="username-text" value="robnhls" />
+    <button id="lookup-button">Look up</button>
+</form>
+
+<label>Name</label> <span id="name-display">...</span>
+
+
+<body>
+
+    <script>
+        "use strict";
+
+
+        function displayUser(userInfo){
+            var namedisplay = document.getElementById("name-display");
+            namedisplay.textContent = userInfo.name;
+        }
+
+        function lookupUser(evt) {
+
+            evt.preventDefault(); //Stop the form from submitting
+
+            var userName = document.getElementById("username-text").value;
+            var url = "https://api.github.com/users/" + userName;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url);  //GET, POST, DELETE, PUT
+            xhr.send();
+
+            //when the result has been completed, run this function
+            xhr.onload = function () {
+                
+                var dataAsText = xhr.responseText;
+                var userInfo = JSON.parse(dataAsText);
+                displayUser(userInfo);
+            };
+        }
+
+
+        var btn = document.getElementById("lookup-button");
+        btn.addEventListener("click", lookupUser);
+
+
+
+    </script>
+
+
+</body>
+
+</html>

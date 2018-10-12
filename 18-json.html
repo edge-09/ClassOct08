@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        "use strict";
+
+        var movies = [
+            {
+                title: "Sharknado",
+                stars: -3,
+                year: 2011
+            },
+            {
+                title: "Attack of the Killer Tomatoes",
+                stars: -2,
+                year: 1980
+            }
+        ];
+
+        var data = JSON.stringify(movies);
+        alert(data);
+
+
+        //stringify - regular javascrip object -> string
+        //parse - string -> regular js object
+
+        var regularObject = JSON.parse(data);
+        alert(regularObject[1].title)
+
+
+
+    </script>
+
+</body>
+
+</html>
