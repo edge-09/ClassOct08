@@ -1,0 +1,19 @@
+[{
+    id: 0,
+    name: "HTML5",
+    description: "HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current version of the HTML standard.",
+    imageUrl: "img/html5.jpg",
+    price: 35.00
+  }, {
+    id: 1,
+    name: "CSS3",
+    description: "Cascading Style Sheets (CSS3) is a style sheet language used for describing the presentation of a document written in a markup language",
+    imageUrl: "img/css3.jpg",
+    price: 26.00
+  }, {
+    id: 2,
+    name: "Angular 4",
+    description: "Angular is a JavaScript-based open-source front-end web application framework to develop single-page applications.",
+    imageUrl: "img/angular4.jpg",
+    price: 59.00
+  }]
