@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    .box{
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        padding: 2em;
+        margin: 2em;
+        display: inline-block;
+        background-color: lightgrey;
+        font-size: 24pt;
+    }
+
+    .selected{
+        transform: scale(1.2) translateY(2em);
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- 
+    nav > a
+
+-->
+    <nav>
+        <a href="#">Home</a>
+        <ul>
+            <li>
+                <a href="#">Page 1</a>
+            </li>
+            <li>
+                <a href="#">Page 2</a>
+            </li>
+            <li>
+                <a href="#">Page 3</a>
+            </li>
+            <li>
+                <a href="#">Page 4</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+
+
+    <div class="container">
+        <div class="box">First</div>
+        <div class="box selected">Second</div>
+        <div class="box">Third</div>
+        <div class="box">Fourth</div>
+    </div>
+
+    <button id="remove-button">Remove</button>
+    <button id="restore-button">Restore</button>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        
+        $(function(){
+                $(".box").click(function(){
+                    $(this).toggleClass("selected");
+
+                });
+        })
+    
+        $("#remove-button").click(function(){
+
+            $(".box.selected")
+                .hide()
+                .removeClass("selected")
+                .addClass("purchased");
+
+        });
+
+            
+        $("#restore-button").click(function(){
+
+            $(".box").show().removeClass("purchased");
+
+        });
+    
+    
+    </script>
+
+</body>
+
+</html>

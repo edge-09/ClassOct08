@@ -1,28 +1,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
-<title>The Quote For Today</title>
-<script type='text/javascript' src='jquery-1.12.1.min.js'></script>
-<script>
-	$(document).ready(function() {
-		var vals = $("td");
-		var vals = $.makeArray($("td"));
-		vals.reverse();
-		var out = $("#dontblink");
-		$("#dontblink").html(
-		"<b>jQuery.isArray() == " + $.isArray(vals) + "!</b>");
-		$.each(vals, function(key, value) {
-			out.append("<hr><font size='4' color='red'>"
-			+ $(this).text() + "</font><br>key =" + key
-			+ ", type = " + value);
+	<title>The Quote For Today</title>
+	<script type='text/javascript' src='jquery-1.12.1.min.js'></script>
+	<script>
+		$(document).ready(function () {
+			var vals = $("td"); // jQuery Object
+			
+
+			//Static Methods ($.whatever)are utillities that have been added to jQuery
+
+
+			var vals = $.makeArray($("td"));
+			vals.reverse();
+			var out = $("#dontblink");
+
+			out.html("<b>jQuery.isArray() == " + $.isArray(vals) + "!</b>");
+
+			$.each(vals, function (key, value) {
+				out.append("<hr><font size='4' color='red'>"
+					+ $(this).text() + "</font><br>key =" + key
+					+ ", type = " + value);
 			});
-			});
-</script>
+		});
+	</script>
 </head>
 
 <body>
-   <section align='center'>
-	<table border='3' width='50%' height='300' align='center' >
+	<section align='center'>
+		<table border='3' width='50%' height='300' align='center'>
 			<tr>
 				<td>
 					<div id="banner" class="banner">Frequently Asked Questions</div>
@@ -64,11 +71,11 @@
 				</td>
 			</tr>
 		</table>
-			<div id='dontblink'>
-	<b>never seen!</b>
-</div>
+		<div id='dontblink'>
+			<b>never seen!</b>
+		</div>
 
-    </section>
+	</section>
 </body>
-</html>
 
+</html>

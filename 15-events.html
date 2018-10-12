@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .display {
+            border: 1px solid black;
+            min-height: 100px;
+            padding: 2em;
+
+        }
+
+        .highlight {
+            background-color: antiquewhite;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box">
+        <button>First</button>
+        <button>Second</button>
+        <button>Third</button>
+        <button>Fourth</button>
+
+    </div>
+
+    <div class="display">
+        ...
+    </div>
+
+    <form id="sample-form">
+        <label for="text-name"></label>
+        <input type="text" name="name" id="text-name">
+
+        <input type="submit" value="send">
+    </form>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+    <script>
+
+
+        $("#sample-form").submit(function (evt) {
+            var name = $("#text-name").val();
+            if (!name) {
+                $(".display").text("Stopping the form from submitting");
+                evt.preventDefault();
+                evt.stopPropagation();
+            }
+
+
+        });
+
+
+        //var btn = $("button").first().
+        // $(".display").bind("mouseenter mouseleave", function(){
+        //     $(".display").toggleClass("highlight");
+        // });
+
+        $(".display").mouseenter(function () {
+            $(".display").addClass("highlight")
+        });
+
+
+        $(".display").mouseleave(function () {
+            $(".display").removeClass("highlight")
+        });
+
+
+
+        // function firstButton_click(evt){
+        //     alert("first one wired second")
+        // }
+        // var btn = $(".box button:first").bind("click", function(evt){
+        //     alert("second one wired first");
+
+        // });
+
+        function commonFunction() {
+
+            //var txt = this.textContent; //textContent is a regule DOM property
+            var txt = $(this).text(); // text mehtod is a jQuery method
+
+            $(".display").html("<b> " + txt + "</b> was clicked");
+
+        }
+
+        //Statically bound to just the button that exist right now
+        //$(".box button").click(commonFunction);
+        $(".box").on("click","button",  commonFunction);
+
+        var btn = $(".box button:first").bind("click", firstButton_click);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="tab-headers">
+        <a href="#tab1">Tab 1</a>
+        <a href="#tab2">Tab 2</a>
+        <a href="#tab3">Tab 3</a>
+        <a href="#extraTab">Extra Tab</a>
+    </div>
+    <div class="tabs">
+        <section id="tab1">
+            <h1>Tab 1</h1>
+            <p>
+                Tab 1 should be the best tab. Aliquid facere quo cum tenetur possimus
+                distinctio repellat amet sint, dolor eos vel labore aut similique mollitia maiores, eaque corporis
+                dolore consectetur dolorem quia, velit ratione maxime ipsa? Reprehenderit doloribus sit incidunt
+                deleniti aperiam consequuntur fugit, repudiandae provident voluptas veritatis distinctio ipsum aliquid
+                animi saepe voluptatibus, sequi repellendus? Accusantium possimus rem sapiente, excepturi temporibus
+                iusto placeat maiores natus impedit expedita ea explicabo, tempore molestiae laboriosam. Voluptatem
+                obcaecati quos, eum, dolorum cum ratione soluta id commodi qui quibusdam inventore libero ut animi
+                nulla modi excepturi voluptates velit. Beatae assumenda doloribus iure dolor? Ducimus.
+            </p>
+
+        </section>
+        <section id="tab2">
+            <h1>Tab 2</h1>
+            <p>
+                Tab 2 is really the best tab. Aliquid facere quo cum tenetur possimus
+                distinctio repellat amet sint, dolor eos vel labore aut similique mollitia maiores, eaque corporis
+                dolore consectetur dolorem quia, velit ratione maxime ipsa? Reprehenderit doloribus sit incidunt
+                deleniti aperiam consequuntur fugit, repudiandae provident voluptas veritatis distinctio ipsum aliquid
+                animi saepe voluptatibus, sequi repellendus? Accusantium possimus rem sapiente, excepturi temporibus
+                iusto placeat maiores natus impedit expedita ea explicabo, tempore molestiae laboriosam. Voluptatem
+                obcaecati quos, eum, dolorum cum ratione soluta id commodi qui quibusdam inventore libero ut animi
+                nulla modi excepturi voluptates velit. Beatae assumenda doloribus iure dolor? Ducimus.
+            </p>
+
+        </section>
+        <section id="tab3">
+            <h1>Tab 3</h1>
+            <p>
+                This is the content for tab 3 adipisicing elit. Aliquid facere quo cum tenetur possimus
+                distinctio repellat amet sint, dolor eos vel labore aut similique mollitia maiores, eaque corporis
+                dolore consectetur dolorem quia, velit ratione maxime ipsa? Reprehenderit doloribus sit incidunt
+                deleniti aperiam consequuntur fugit, repudiandae provident voluptas veritatis distinctio ipsum aliquid
+                animi saepe voluptatibus, sequi repellendus? Accusantium possimus rem sapiente, excepturi temporibus
+                iusto placeat maiores natus impedit expedita ea explicabo, tempore molestiae laboriosam. Voluptatem
+                obcaecati quos, eum, dolorum cum ratione soluta id commodi qui quibusdam inventore libero ut animi
+                nulla modi excepturi voluptates velit. Beatae assumenda doloribus iure dolor? Ducimus.
+            </p>
+
+        </section>
+
+        <section id="extraTab">
+            <h1>Extra Tab</h1>
+            <p>
+                This tab is soo extra!. 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dignissimos incidunt vero, mollitia illo aliquam ex autem doloribus voluptatem neque vitae assumenda earum explicabo perspiciatis nulla ullam dolore corrupti, repellat, veritatis odit! Voluptatem eaque voluptas delectus unde commodi rerum ducimus eius quaerat nulla cupiditate, harum temporibus reprehenderit ipsum dolorum corrupti?
+            </p>
+        </section>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"></script>
+
+    <script>
+
+
+        $(function () {
+
+            function createTabButtons() {
+
+                    $(".tab-headers").empty();
+
+                $(".tabs section").each(function (index, element) {
+
+                    var section = $(element);
+
+                    var header = section.find("h1").text();
+                    var sectionId = section.attr("id");
+
+                    $("<button>")
+                        .text(header)
+                        .click(function () {
+                            location.hash = sectionId; //force a tab change
+                        })
+                        .appendTo(".tab-headers");
+
+                });
+            }
+
+
+            function tabChanged(evt){
+                //#tab1
+                tabid = location.hash.slice(1); //slice is taking the first character off: the #
+                setTab(tabid);
+            }
+
+            function setTab(tabid) {
+                if (!tabid) {
+                    tabid = $(".tabs section:first").attr("id");
+                }
+                $(".tabs section").hide();
+                $("#" + tabid).show();
+            }
+
+
+            function setup() {
+
+                $(".tabs section").hide();
+                
+                createTabButtons();
+
+                $(window)
+                    .on("hashchange", tabChanged)
+                    .trigger("hashchange");
+            }
+
+
+            setup();
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
