@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <label for="username-text">User Name</label>
+        <input id="username-text" value="robnhls" />
+        <button id="lookup-button">Look up</button>
+    </form>
+
+
+    <img style="display:none" id="avatar-image" height="64" width="64">
+    <label>Name</label> <span id="name-display">...</span><br>
+    <label>Followers</label> <span id="followers-display">...</span><br>
+    <h3>Repositories</h3>
+    <ul id="repo-list">
+
+    </ul>
+
+    <div id="pleaseWait" style="display: none">
+        <h3>We are talking to github right now ...</h3>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+        "use strict";
+
+
+        $(document).ajaxStart(function(){
+            $("#pleaseWait").delay(500).show(0);
+        });
+        $(document).ajaxStop(function(){
+            $("#pleaseWait").clearQueue().hide();
+        });
+
+        function displayUser(userInfo) {
+            $("#name-display").text(userInfo.name);
+            $("#followers-display").text(userInfo.followers);
+            $("#avatar-image").attr("src", userInfo.avatar_url).show();
+            return userInfo;
+        }
+
+        function getRepositories(userInfo){
+                var url = userInfo.repos_url;
+                return $.getJSON(url)
+        }
+
+        function displayRepositories(listOfRepositories){
+            for (var i = 0; i < listOfRepositories.length; i++) {
+                const repo = listOfRepositories[i];
+                var name = repo.name;
+                $("<li>").text(name).appendTo("#repo-list")
+            }
+        }
+
+        function showError(error){
+            $("#name-display").text("Failed to lookup that user");
+        }
+
+        function lookupUser(evt) {
+
+            evt.preventDefault(); //Stop the form from submitting
+
+            var userName = $("#username-text").val();
+            var url = "https://api.github.com/users/" + userName;
+
+
+            //promise is a javascript IOU
+            //promise or deferred
+
+            // var promise = $.getJSON(url);
+            // promise.done(displayUser);
+            // promise.fail(showError);
+            $.getJSON(url)
+                .then(displayUser)
+                .then(getRepositories)
+                .then(displayRepositories)
+                .fail(showError);
+
+        }
+
+
+        $("#lookup-button").click(lookupUser);
+
+
+
+    </script>
+
+
+</body>
+
+</html>

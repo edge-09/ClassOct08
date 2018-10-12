@@ -8,22 +8,23 @@
     <title>Document</title>
 </head>
 
-<form>
-    <label for="username-text">User Name</label>
-    <input id="username-text" value="robnhls" />
-    <button id="lookup-button">Look up</button>
-</form>
-
-<label>Name</label> <span id="name-display">...</span>
-
-
 <body>
+
+    <form>
+        <label for="username-text">User Name</label>
+        <input id="username-text" value="robnhls" />
+        <button id="lookup-button">Look up</button>
+    </form>
+
+    <label>Name</label> <span id="name-display">...</span>
+
+
 
     <script>
         "use strict";
 
 
-        function displayUser(userInfo){
+        function displayUser(userInfo) {
             var namedisplay = document.getElementById("name-display");
             namedisplay.textContent = userInfo.name;
         }
@@ -41,7 +42,7 @@
 
             //when the result has been completed, run this function
             xhr.onload = function () {
-                
+
                 var dataAsText = xhr.responseText;
                 var userInfo = JSON.parse(dataAsText);
                 displayUser(userInfo);
